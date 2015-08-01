@@ -1,0 +1,18 @@
+<%= index_table do %>
+  <thead>
+    <tr>
+      <%= index_th :id %>
+      <%= index_th :title %>
+      <%= actions_th %>
+    </tr>
+  </thead>
+  <tbody>
+    <% @resources.each do |blog_post| %>
+      <tr>
+        <%= index_td blog_post, :id %>
+        <%= index_td blog_post, :title %>
+        <%= actions_td blog_post %>
+      </tr>
+    <% end %>
+  </tbody>
+<% end %>

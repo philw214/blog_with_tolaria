@@ -1,0 +1,13 @@
+<%= f.label :title %>
+<%= f.text_field :title, placeholder:"Post title" %>
+<%= f.hint "The title of this post" %>
+
+<%= f.label :body %>
+<%= f.markdown_composer :body %>
+<%= f.hint "The body of this post."%>
+
+<%= f.has_many :tags do |f| %>
+  <%= f.label :tag %>
+  <%= f.text_field :description %>
+  <%= f.hint "Tag it!" %>
+<% end %>
